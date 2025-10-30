@@ -1,0 +1,26 @@
+spring.application.name: LoanOriginationSystem
+logging:
+  level:
+    root: INFO
+    com.example.loanorigination.controller: INFO
+    com.example.loanorigination.service: DEBUG
+spring:
+  h2:
+    console:
+      enabled: true
+# --- H2 Database Configuration ---
+  datasource:
+    url: jdbc:h2:mem:loan_db;
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+# In production, this would come from environment variables, AWS Secrets Manager, or Vault.
+encryption:
+  aes-key: "1234567890123456"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
