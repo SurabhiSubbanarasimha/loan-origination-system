@@ -82,7 +82,7 @@ export default function LoanApplication() {
             setResult(data);
         } catch (err) {
             console.error(err);
-            setError("Could not submit application.");
+            setError(err.message || "Could not submit application.");
         } finally {
             setLoading(false);
         }

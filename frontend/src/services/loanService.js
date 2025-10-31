@@ -23,7 +23,21 @@ export async function submitLoanApplication(form) {
             headers: { "Content-Type": "application/json" },
         });
         return data;
-    } catch (err) {
-        throw handleApiError(err);
+    } catch (error) {
+        console.error("[loanService] Error submitting application:", error);
+
+        // ✅ Priority 1: backend field-level validation errors
+        if (error.response?.data && typeof error.response.data === "object" && !error.response.data.message) {
+            const messages = Object.values(error.response.data);
+            throw new Error(messages.join(", "));
+        }
+
+        // ✅ Priority 2: backend message field
+        if (error.response?.data?.message) {
+            throw new Error(error.response.data.message);
+        }
+
+        // ✅ Priority 3: generic fallback
+        throw new Error("Could not submit application. Please try again later.");
     }
 }

@@ -1,0 +1,50 @@
+# =====================================
+# 🧭 Root-level ignores
+# =====================================
+.DS_Store
+.env
+.env.local
+*.log
+*.tmp
+*.swp
+*.bak
+.idea/
+.vscode/
+*.iml
+*.orig
+*~
+Thumbs.db
+*.pid
+
+# =====================================
+# ⚛️ React + Vite (Frontend)
+# =====================================
+loan-origination-frontend/node_modules/
+loan-origination-frontend/dist/
+loan-origination-frontend/.eslintcache
+loan-origination-frontend/.vite/
+loan-origination-frontend/.env
+loan-origination-frontend/.env.local
+loan-origination-frontend/.env.development.local
+loan-origination-frontend/.env.test.local
+loan-origination-frontend/.env.production.local
+loan-origination-frontend/npm-debug.log*
+loan-origination-frontend/yarn-debug.log*
+loan-origination-frontend/yarn-error.log*
+loan-origination-frontend/coverage/
+loan-origination-frontend/.DS_Store
+
+# =====================================
+# ☕ Spring Boot + Gradle (Backend)
+# =====================================
+loan-origination-backend/build/
+loan-origination-backend/out/
+loan-origination-backend/.gradle/
+loan-origination-backend/gradle-app.setting
+loan-origination-backend/logs/
+loan-origination-backend/*.db
+loan-origination-backend/.DS_Store
+
+# Hide local configs or credentials
+loan-origination-backend/.env
+loan-origination-backend/src/main/resources/application-local.yml
