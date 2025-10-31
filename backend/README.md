@@ -8,7 +8,7 @@ This backend exposes REST APIs consumed by the React frontend. It follows **Clea
 
 ## Tech Stack
 
-- **Java 17**
+- **Java 21**
 - **Spring Boot 3**
     - Spring Web (REST APIs)
     - Spring Data JPA (PostgreSQL/H2)

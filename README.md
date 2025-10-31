@@ -27,7 +27,7 @@ loan-origination-system/
 ```
 
 ### Backend
-- **Framework:** Spring Boot 3 (Java 17)
+- **Framework:** Spring Boot 3 (Java 21)
 - **Build:** Gradle Kotlin DSL (`build.gradle.kts`)
 - **Database:** H2 (in-memory) or PostgreSQL (configurable)
 - **Libraries:** Lombok, MapStruct, JPA, Spring Web, Validation
